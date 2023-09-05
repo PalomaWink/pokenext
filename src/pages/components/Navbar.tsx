@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Products() {
+export default function Navbar() {
   return (
     <div>
-      <h1>/products</h1>
+      <h1>Navbar</h1>
       <ul>
         <li>
           <Link href='/products'>Products</Link>
