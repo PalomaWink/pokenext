@@ -1,7 +1,14 @@
 .footer {
   display: flex;
-  align-items: center;
+  background-image: url('../../public/images/7629398.jpg');
+  width: auto;
+  height: 100vh;
+  background-size: cover;
+  align-items: flex-end;
   justify-content: center;
-  background-color: black;
-  color: #fff;
+  color: #000;
+}
+
+.footer p {
+  margin-bottom: 10px;
 }
