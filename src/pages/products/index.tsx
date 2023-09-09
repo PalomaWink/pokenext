@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function Products() {
   return (
     <div>
-      <h1>/products</h1>
+      <h1>Products</h1>
       <ul>
         <li>
-          <Link href='/products'>Products</Link>
+          <Link href='/products/shirt'>Products</Link>
         </li>
       </ul>
     </div>
