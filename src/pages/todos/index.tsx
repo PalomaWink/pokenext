@@ -1,5 +1,5 @@
-import styles from '../styles/Todos.module.css'
-import { Todo } from '../types';
+import styles from '../../styles/Todos.module.css'
+import { Todo } from '../../types';
 
 export async function getStaticProps() {
   const data = await fetch('https://jsonplaceholder.typicode.com/todos')
