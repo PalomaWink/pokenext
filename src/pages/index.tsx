@@ -10,15 +10,6 @@ export default function Home() {
   // o Head é um elemento do próprio next, onde é possivel trabalhar com metadados
   // as keyworkds são metadados de palavras chave
   return (
-    <>
-      <Head>
-        <title>Página principal</title>
-        <meta name='keyworkds' content='Roupas, Calçados, Boné'></meta>
-        <meta name='description' content='Encontre a melhor roupa para você'></meta>
-      </Head>
-      <div>
-        <h1 className={styles.title}>Hello World NextJS</h1>
-      </div>
-    </>
+      <h1>Pokenext</h1>
   )
 }
