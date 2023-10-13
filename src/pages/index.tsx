@@ -1,11 +1,10 @@
 // import { Inter } from 'next/font/google';
 import styles from '../styles/Home.module.css'
-import Head from 'next/head'
 import Image from 'next/image';
 import pokeball from '../../public/images/pokeball.png';
-import { pokemon, HomeProps, PokemonAPI } from '../types';
+import { pokemon, HomeProps } from '../types';
 
-import Card from './components/Card';
+import Card from '../../components/Card';
 
 export async function getStaticProps() {
   const maxPokemons = 251; 
