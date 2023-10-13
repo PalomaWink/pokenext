@@ -27,7 +27,6 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context: ContextoPokemon) => {
-  console.log(context);
   
   const id = context.params.pokemonId;
 
@@ -42,8 +41,7 @@ export const getStaticProps = async (context: ContextoPokemon) => {
 }
 
 export default function Pokemon({ pokemon }: PokemonProps) {
-  console.log(pokemon);
-  
+
   return (
     <div className={styles.pokemon_conteiner}>
       <h1 className={styles.pokemon_title}>{pokemon.name}</h1>
