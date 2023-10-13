@@ -3,7 +3,9 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import Image from 'next/image';
 import pokeball from '../../public/images/pokeball.png';
-import { pokemon, HomeProps } from '../types';
+import { pokemon, HomeProps, PokemonAPI } from '../types';
+
+import Card from './components/Card';
 
 export async function getStaticProps() {
   const maxPokemons = 251; 
@@ -27,24 +29,23 @@ export async function getStaticProps() {
 
 
 export default function Home({ pokemons }: HomeProps) {
-  console.log(pokemons);
-  
   // Cada componente e uma pagina e isso se torna uma url /about, /favorites...
   // Existem tambem os Nested Routes(sao rotas compostas), /product/shirt, pra fazer isso criamos pastas
   // o Head é um elemento do próprio next, onde é possivel trabalhar com metadados
   // as keyworkds são metadados de palavras chave
   return (
-      <div>
-        <h1>PokeNext</h1>
-        <Image src={pokeball} width='50' height='50' alt='Pokebola' />
-        <div>
+      <>
+        <div className={styles.title_conteiner}>
+          <h1 className={styles.title}>
+            Poke<span>Next</span>
+          </h1>
+          <Image src={pokeball} width='50' height='50' alt='Pokebola' />
+        </div>
+        <div className={styles.pokemons_conteiner}>
           {pokemons.map((pokemon) => (
-            <div key={pokemon.id}>
-              <p>{pokemon.name}</p>
-              <Image src={pokemon.image} width='50' height='50' alt='Pokemon Image' />
-            </div>
+            <Card key={pokemon.id} pokemon={pokemon} />
           ))}
         </div>
-      </div>
+      </>
   )
 }
