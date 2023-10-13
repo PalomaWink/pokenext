@@ -5,12 +5,16 @@ export type pokemon = {
   types: string[];
 }
 
-export type pokemonAPI = {
+export interface PokemonAPI {
   id: number;
   name: string;
-  image: string;
+  url: string;
 }
 
 export type HomeProps = {
-  pokemons: pokemonAPI[];
+  pokemons: PokemonAPI[];
+}
+
+export type HomeProp = {
+  pokemon: PokemonAPI[];
 }
