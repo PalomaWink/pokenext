@@ -1,8 +1,8 @@
-import { PokemonAPI } from "../../types"
+import { PokemonAPI } from "../src/types"
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from '../../styles/Card.module.css'
+import styles from '../src/styles/Card.module.css'
 
 type CardProps = {
   pokemon: PokemonAPI & { name: string }
